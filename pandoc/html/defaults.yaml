@@ -1,8 +1,12 @@
 --- # pandoc_defaults.yaml for markdown to HTML
 standalone: true
+embed-resources: true
 wrap: none
 columns: 80
 # template: ${.}/latex-base.tex
 from: markdown-auto_identifiers+raw_tex+citations
+css: 
+  - ${.}/fonts.css
+  - ${.}/stylesheet.css
 filters: 
   - "${.}/../string-substitution.py"

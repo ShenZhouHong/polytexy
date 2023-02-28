@@ -11,14 +11,14 @@ git_link: https://example.com/
 ---
 
 "Lorem markdownum illa 'carmine' ter hominesque ferunt faciles parenti super montis
-si." Edita feres praesensque stirpe Thaumantias ursos alios dum inde adhuc duae
+si." *Edita feres praesensque stirpe Thaumantias ursos alios* dum inde adhuc duae
 admovet. Siculo qua non: lumina 'Maeandrius habebimus' **trunca**. Cooperate, reelect.
 
 # Currum ad quia fuit flammis ignara corpora
 
-Credere dicere, annis. Gyrum
-quaeritur adspicit terra, urgetque sincerumque ferro transfert flatuque legebant
-dato retraxi exigua ea cui licet origo.
+*Credere dicere, annis. Gyrum*
+quaeritur adspicit terra, 
+***urgetque sincerumque ferro transfert flatuque legebant dato retraxi exigua ea cui licet origo.***
 
 ## Ab arva Pyramus Economy
 

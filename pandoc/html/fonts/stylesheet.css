@@ -1,0 +1,74 @@
+/* Libertinus Serif and Variants */
+@font-face {
+    font-family: 'libertinus_serifregular';
+    src: url('https://s.hong.io/fonts/libertinusserif-regular-webfont.woff2') format('woff2'),
+         url('https://s.hong.io/fonts/libertinusserif-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'libertinus_serifitalic';
+    src: url('https://s.hong.io/fonts/libertinusserif-italic-webfont.woff2') format('woff2'),
+         url('https://s.hong.io/fonts/libertinusserif-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'libertinus_serifsemibold';
+    src: url('https://s.hong.io/fonts/libertinusserif-semibold-webfont.woff2') format('woff2'),
+         url('https://s.hong.io/fonts/libertinusserif-semibold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'libertinus_serifSBdIt';
+    src: url('https://s.hong.io/fonts/libertinusserif-semibolditalic-webfont.woff2') format('woff2'),
+         url('https://s.hong.io/fonts/libertinusserif-semibolditalic-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'libertinus_serifbold';
+    src: url('https://s.hong.io/fonts/libertinusserif-bold-webfont.woff2') format('woff2'),
+         url('https://s.hong.io/fonts/libertinusserif-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'libertinus_serifbold_italic';
+    src: url('https://s.hong.io/fonts/libertinusserif-bolditalic-webfont.woff2') format('woff2'),
+         url('https://s.hong.io/fonts/libertinusserif-bolditalic-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Libertinus Sans and Variants */
+@font-face {
+    font-family: 'libertinus_sansregular';
+    src: url('https://s.hong.io/fonts/libertinussans-regular-webfont.woff2') format('woff2'),
+         url('https://s.hong.io/fonts/libertinussans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'libertinus_sansitalic';
+    src: url('https://s.hong.io/fonts/libertinussans-italic-webfont.woff2') format('woff2'),
+         url('https://s.hong.io/fonts/libertinussans-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'libertinus_sansbold';
+    src: url('https://s.hong.io/fonts/libertinussans-bold-webfont.woff2') format('woff2'),
+         url('https://s.hong.io/fonts/libertinussans-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Libertinus Mono */
+@font-face {
+    font-family: 'libertinus_monoregular';
+    src: url('https://s.hong.io/fonts/libertinusmono-regular-webfont.woff2') format('woff2'),
+         url('https://s.hong.io/fonts/libertinusmono-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
