@@ -1,0 +1,16 @@
+--- # pandoc_defaults.yaml for markdown to LaTeX
+
+# We run pandoc with the following options. The most important of which are
+#  - Use the basic barebones template.tex template
+#  - Suppress the auto-generation of LaTeX hyperref targets on sections
+#  - Allow raw LaTeX to be passed through from the source markdown file
+#  - Write using a custom LaTeX writer (i.e. pandoc conversion ruleset)
+
+standalone: true
+wrap: none
+columns: 80
+cite-method: biblatex
+template: ${.}/latex-base.tex
+from: markdown-auto_identifiers+raw_tex+citations
+filters: 
+  - "${.}/../string-substitution.py"
