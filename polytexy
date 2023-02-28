@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
-
 set -eEu -o pipefail
 
 # Retrieve script source directory as DIR. This allows relative pathing to work
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-# Iterate over the array and check if each dependency is available
+# Iterate over an array of dependencies and check if each dependency is available
 dependencies=(pandoc latexmk lualatex)
 for dependency in "${dependencies[@]}"
 do
@@ -71,10 +70,10 @@ build_pdf() {
 # ${file} local path of the file
 for file in "$@"
 do
-    # First, check if the file has .md extension
-    if [[ ! $file == *.md ]]
+    # First, check if the file exists, and ends in .md extension.
+    if [[ ! -s $file || ! $file == *.md ]]
     then
-        echo "Error: $file does not have .md extension. Conversion stopped."
+        echo "Error: $file is not a valid Markdown file. Conversion stopped."
         exit 1
     fi
 
