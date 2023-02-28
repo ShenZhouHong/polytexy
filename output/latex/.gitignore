@@ -225,3 +225,4 @@ TSWLatexianTemp*
 
 # XML Document Metadata (Generated during make)
 *.xmpi
+*.xmpdata
