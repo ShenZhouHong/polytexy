@@ -1,4 +1,4 @@
-# static-site-gen
+# polytexy
 
 ![Diagram of the Static Site Generator.](./generator.png)
 

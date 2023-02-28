@@ -1,5 +1,0 @@
-# Exclude output files from version control
-latex/*.tex
-epub/*.epub
-html/*.html
-pdf/*.pdf

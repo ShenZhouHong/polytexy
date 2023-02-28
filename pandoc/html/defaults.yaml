@@ -6,7 +6,7 @@ columns: 80
 # template: ${.}/latex-base.tex
 from: markdown-auto_identifiers+raw_tex+citations
 css: 
-  - ${.}/fonts.css
+  - ${.}/../fonts.css
   - ${.}/stylesheet.css
 filters: 
   - "${.}/../string-substitution.py"

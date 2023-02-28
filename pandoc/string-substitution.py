@@ -9,15 +9,18 @@ import panflute as pf
 import string
 import csv
 import re
+import os
+
+base_path = os.path.dirname(os.path.abspath(__file__))
 
 # List of word substitution rulesets, in the form of CSV files. These rulesets
 # take the form of lines of search,replace strings, where search is the term
 # that is being looked for, and replace is the substitution.
 ruleset_files: list[str] = [
-    './pandoc/ae-ligature.csv',
-    './pandoc/oe-ligature.csv',
-    './pandoc/diaeresis.csv',
-    './pandoc/custom.csv'
+    base_path + '/ae-ligature.csv',
+    base_path + '/oe-ligature.csv',
+    base_path + '/diaeresis.csv',
+    base_path + '/custom.csv'
 ]
 
 # Initialise a ruleset dict containing "search":"replace" as key-value pairs
