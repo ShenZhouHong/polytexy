@@ -144,15 +144,16 @@
 
 % General packages in use
 \RequirePackage{fontspec}                 % LuaLaTeX font support
-\RequirePackage{babel}
+\RequirePackage{babel}                    % Multiple languages and metadata support
 \RequirePackage{libertinus-otf}           % Beautiful libertinus font
-\RequirePackage{microtype}
+\RequirePackage{microtype}                % Microtypography adjustments
 \RequirePackage[pass]{geometry}           % Adjusts for narrower page margins
 \RequirePackage[autopunct]{csquotes}      % For more advanced quotations
 \RequirePackage{setspace}                 % Used to change line and paragraph spacing
 \RequirePackage[indent=3em, skip]{parskip}% For empty lines between paragraphs
 \RequirePackage[compact]{titlesec}        % Sets section titles to be more compact
 \RequirePackage{titling}                  % In order to make the title higher on page
+\RequirePackage{enumitem}                 % Customize itemize and enumerate environments
 
 
 % Finally, we begin some misc. configuration
@@ -179,7 +180,7 @@
 % The following command is used to "hang" the default LaTeX title from the top
 % of the page (e.g. like a painting frame). The default LaTeX title sits a bit
 % too low, so the following command sets it higher.
-\setlength{\droptitle}{-4em}
+\setlength{\droptitle}{-5em}
 
 % Settings for csquotes
 \MakeOuterQuote{"}
@@ -190,6 +191,12 @@
    \item\relax
 }{%
   \endlist
+}
+
+% Likewise, set the indentation for itemize and enumerate to be at the same level as that of \parindent
+\setlist[itemize,enumerate,description]{
+  leftmargin=\dimexpr\parindent-\itemindent\relax,
+  noitemsep % Reduces intra-item spacing in these environments 
 }
 
 % Some Final Late-Loading packages

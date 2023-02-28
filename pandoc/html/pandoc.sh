@@ -13,9 +13,9 @@ fi
 # If no arguments were provided or the --help/-h flag was passed, print usage information
 if [[ $# -eq 0 ]] || [[ $1 == "-h" || $1 == "--help" ]]
 then
-    echo "Markdown to EPUB Converter (w/ Pandoc)"
+    echo "Markdown to HTML Converter (w/ Pandoc)"
     echo "Usage: $(basename $0) file1.md [file2.md ...]"
-    echo "Convert one or more Markdown files to EPUB using pandoc."
+    echo "Convert one or more Markdown files to HTML using pandoc."
     exit 0
 fi
 
@@ -43,5 +43,5 @@ do
     --biblatex \
     --from markdown-auto_identifiers+raw_tex+citations \
     --filter "$DIR/../string-substitution.py"  \
-    --out "$DIR/../../output/epub/${filename}".epub
+    --out "$DIR/../../output/html/${filename}".html
 done

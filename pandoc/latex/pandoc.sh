@@ -13,6 +13,7 @@ fi
 # If no arguments were provided or the --help/-h flag was passed, print usage information
 if [[ $# -eq 0 ]] || [[ $1 == "-h" || $1 == "--help" ]]
 then
+    echo "Markdown to LaTeX Converter (w/ Pandoc)"
     echo "Usage: $(basename $0) file1.md [file2.md ...]"
     echo "Convert one or more Markdown files to LaTeX using pandoc."
     exit 0

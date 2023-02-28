@@ -2,6 +2,7 @@
 build: $(wildcard ./source/markdown/*.md)
 	./pandoc/latex/pandoc.sh $?
 	./pandoc/epub/pandoc.sh $?
+	./pandoc/html/pandoc.sh $?
 	$(MAKE) -C output/latex/
 
 clean:
