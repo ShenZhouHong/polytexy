@@ -19,11 +19,17 @@
   $endif$
 \end{filecontents*}
 \documentclass[
+${if(documentclass)}
+  ${for(documentclass)}
+    ${it},
+  ${endfor}
+${else}
   protrudelabels,
   onehalfspacing,
   extraligatures,
   notitlepage,
   english
+${endif}
 ]{humanize-minimal}
 
 \title{
@@ -48,7 +54,10 @@
 \providecommand{\tightlist}{}
 
 \begin{document}
-\maketitle
+
+$if(maketitle)$
+  \maketitle
+$endif$
 
 $body$
 

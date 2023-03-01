@@ -5,7 +5,7 @@ set -eEu -o pipefail
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Iterate over an array of dependencies and check if each dependency is available
-dependencies=(pandoc latexmk lualatex)
+dependencies=(pandoc latexmk lualatex python)
 for dependency in "${dependencies[@]}"
 do
     if ! command -v "${dependency}" &> /dev/null
@@ -81,5 +81,6 @@ do
     build_epub  ${file}
     build_latex ${file}
     build_pdf   ${file}
+    
     echo "Successfully converted ${file} into PDF, HTML, and EPUB."
 done

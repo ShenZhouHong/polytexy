@@ -5,9 +5,16 @@ author: Shen Zhou Hong
 description: File description test string.
 date: 2020-12-26
 lang: en-US
-csquotes: true
 url_link: https://example.com/
 git_link: https://example.com/
+documentclass:
+    - protrudelabels
+    - onehalfspacing
+    - extraligatures
+    - notitlepage
+    - english
+maketitle: false
+csquotes: true
 ---
 
 "Lorem markdownum illa 'carmine' ter hominesque ferunt faciles parenti super montis

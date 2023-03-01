@@ -22,14 +22,26 @@ Example:
 
 ```yaml
 --- 
+# General document information (title, author, and date required)
 title: Test Document 1
 subtitle: Test document subtitle
 author: Shen Zhou Hong
 description: File description test string.
 date: 2020-12-26
 lang: en-US
-csquotes: true
+
+# PDF/A metadata (all optional)
 url_link: https://example.com/
 git_link: https://example.com/
+
+# LaTeX specific options (all optional)
+documentclass:
+    - protrudelabels
+    - onehalfspacing
+    - extraligatures
+    - notitlepage
+    - english
+maketitle: true
+csquotes: true
 ---
 ```
