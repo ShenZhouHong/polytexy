@@ -1,8 +1,8 @@
-# polytexy
-
-Command-line utility that converts Markdown files into well-formed PDFs, EPUBs, and stand-alone HTML files.
+# Polytexy
 
 ![Polytexy Logo.](./logo.png)
+
+Command-line utility that converts Markdown files into well-formed PDFs, EPUBs, and stand-alone HTML files.
 
 ## Features
 

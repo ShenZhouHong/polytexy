@@ -1,0 +1,75 @@
+/* Libertinus Serif and Variants */
+@font-face {
+    font-family: 'libertinus_serif';
+    src: url('libertinusserif-regular-webfont.woff2') format('woff2'),
+         url('libertinusserif-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'libertinus_serif';
+    src: url('libertinusserif-italic-webfont.woff2') format('woff2'),
+         url('libertinusserif-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'libertinus_serif';
+    src: url('libertinusserif-semibold-webfont.woff2') format('woff2'),
+         url('libertinusserif-semibold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'libertinus_serif';
+    src: url('libertinusserif-semibolditalic-webfont.woff2') format('woff2'),
+         url('libertinusserif-semibolditalic-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'libertinus_serif';
+    src: url('libertinusserif-bold-webfont.woff2') format('woff2'),
+         url('libertinusserif-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'libertinus_serif';
+    src: url('libertinusserif-bolditalic-webfont.woff2') format('woff2'),
+         url('libertinusserif-bolditalic-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Libertinus Sans and Variants */
+@font-face {
+    font-family: 'libertinus_sans';
+    src: url('libertinussans-regular-webfont.woff2') format('woff2'),
+         url('libertinussans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'libertinus_sans';
+    src: url('libertinussans-italic-webfont.woff2') format('woff2'),
+         url('libertinussans-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'libertinus_sans';
+    src: url('libertinussans-bold-webfont.woff2') format('woff2'),
+         url('libertinussans-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Libertinus Mono */
+@font-face {
+    font-family: 'libertinus_monoregular';
+    src: url('libertinusmono-regular-webfont.woff2') format('woff2'),
+         url('libertinusmono-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
