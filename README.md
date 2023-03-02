@@ -1,10 +1,40 @@
 # polytexy
 
-![Diagram of the Static Site Generator.](./generator.png)
+Command-line utility that converts Markdown files into well-formed PDFs, EPUBs, and stand-alone HTML files.
 
-Command line tool that automatically converts markdown files into PDFs, EPUBs, and self-contained HTML files.
+![Polytexy Logo.](./logo.png)
 
-Usage:
+## Features
+
+Polytexy's generated PDF files use the [Humanize](https://github.com/ShenZhouHong/latex-essay) LaTeX documentclass, a best-in-class LuaLaTeX template for academic typesetting.
+
+## Installation
+
+Polytexy is a bash script which uses `pandoc`, `latexmk`, `lualatex`, and `python` in order to convert markdown documents into well-formed PDFs, EPUBs, and stand-alone HTML files. In order to use polytexy, first make sure that all dependencies are installed and available:
+
+```bash
+sudo apt install pandoc latexmk texlive
+```
+
+Next, ensure the `polytexy` file is given executable permissions.
+
+
+```bash
+sudo chmod +x polytexy
+```
+
+The `polytexy` script is now ready for use. In order to have the command available for the user, ensure that the directory is available within your `$PATH`. This can be done by adding the following line to your `~/.bashrc` file:
+
+```bash
+# Append the polytexy directory to the user's $PATH
+PATH="/path/to/polytexy":$PATH
+```
+
+Now run `source ~/.bashrc` or restart your terminal, in order to have the changes take effect.
+
+## Usage
+
+Polytexy takes one (or more) markdown files as inputs, and converts them into PDF, HTML, and EPUB files.
 
 ```
 Polytexy: Markdown to PDF, HTML, & EPUB Converter
@@ -12,13 +42,19 @@ Polytexy: Markdown to PDF, HTML, & EPUB Converter
     Convert one or more .md files to .pdf, .html, & .epub (w/ pandoc)
 ```
 
-Example:
+For a quick test, you may run `polytexy` on the provided `example.md` file in this repository.
 
 ```
-./polytexy example.md
+polytexy example.md
 ```
+
+The utility will generate `example.pdf`, `example.html`, and `example.epub`.
 
 ## Markdown Metadata
+
+In order to generate the output files with the correct metadata, `polytexy` requires additional information specified as a `yaml` file at the beginning of every markdown document. The following snippet is an example of the metadata fields supported.
+
+Note that some fields such as `title`, `author`, and `date` are required.
 
 ```yaml
 --- 
@@ -45,3 +81,10 @@ maketitle: true
 csquotes: true
 ---
 ```
+
+## License and credits
+
+Polytexy is available under AGPLv3.
+
+Polytexy depends on [pandoc](https://github.com/jgm/pandoc), a universal document converter written by John MacFarlane. Pandoc is licensed under GPLv2.
+
