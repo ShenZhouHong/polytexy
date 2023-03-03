@@ -6,7 +6,9 @@ Command-line utility that converts Markdown files into well-formed PDFs, EPUBs, 
 
 ## Features
 
-Polytexy's generated PDF files use the [Humanize](https://github.com/ShenZhouHong/latex-essay) LaTeX documentclass, a best-in-class LuaLaTeX template for academic typesetting.
+* Polytexy's generated PDF files use the [Humanize](https://github.com/ShenZhouHong/latex-essay) LaTeX documentclass, a best-in-class LuaLaTeX template for academic typesetting.
+* Polytexy outputs EPUB files with properly formatted tags and metadata, allowing for easy use and distribution on mobile devices.
+* Stand-alone HTML files with embedded fonts allows for content to be shared on static site servers.
 
 ## Installation
 
