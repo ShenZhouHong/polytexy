@@ -31,31 +31,31 @@ fi
 
 build_html() {
     local file="$1"
-    local filename="$(basename "$file" .md)"
-    pandoc "$file" --defaults "$DIR/pandoc/html/defaults.yaml" --out "$filename.html"
+    local filename="$(basename "${file}" .md)"
+    pandoc "${file}" --defaults "${DIR}/pandoc/html/defaults.yaml" --out "${filename}.html"
 }
 
 build_epub() {
     local file="$1"
-    local filename="$(basename "$file" .md)"
-    pandoc "$file" --defaults "$DIR/pandoc/epub/defaults.yaml" --out "$filename.epub"
+    local filename="$(basename "${file}" .md)"
+    pandoc "${file}" --defaults "${DIR}/pandoc/epub/defaults.yaml" --out "${filename}.epub"
 }
 
 build_latex() {
     local file="$1"
-    local filename="$(basename "$file" .md)"
+    local filename="$(basename "${file}" .md)"
     pandoc "${file}" \
-    --defaults "$DIR/pandoc/latex/defaults.yaml" \
-    --to       "$DIR/pandoc/latex/latex-writer.lua"  \
+    --defaults "${DIR}/pandoc/latex/defaults.yaml" \
+    --to       "${DIR}/pandoc/latex/latex-writer.lua"  \
     --out      "${filename}".tex
 }
 
 build_pdf() {
     local file="$1"
-    local filename="$(basename "$file" .md)"
+    local filename="$(basename "${file}" .md)"
 
     # Temporarily set ./pandoc/latex as a TEXINPUT, so our class files can be found by latexmk.
-    export TEXINPUTS=".:$DIR/pandoc/latex:"
+    export TEXINPUTS=".:${DIR}/pandoc/latex:"
 
     # Build PDF from LaTeX source file via LuaLaTeX
     latexmk -silent -pdf -lualatex -outdir=. "${filename}".tex
@@ -71,7 +71,7 @@ build_pdf() {
 for file in "$@"
 do
     # First, check if the file exists, and ends in .md extension.
-    if [[ ! -s $file || ! $file == *.md ]]
+    if [[ ! -s ${file} || ! ${file} == *.md ]]
     then
         echo "Error: $file is not a valid Markdown file. Conversion stopped."
         exit 1

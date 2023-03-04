@@ -13,7 +13,7 @@ documentclass:
     - extraligatures
     - notitlepage
     - english
-maketitle: false
+maketitle: true
 csquotes: true
 ---
 
