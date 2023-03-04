@@ -10,16 +10,16 @@ for dependency in "${dependencies[@]}"
 do
     if ! command -v "${dependency}" &> /dev/null
     then
-        echo "Error: ${dependency} is not available. Please install ${dependency} before running this script."
+        printf '%s\n' "Error: ${dependency} is not available. Please install ${dependency} before running this script."
         exit 1
     fi
 done
 
 # Define a function for printing usage instructions
 print_usage() {
-    echo "Polytexy: Markdown to PDF, HTML, & EPUB Converter"
-    echo "    Usage: $(basename $0) file1.md [file2.md ...]"
-    echo "    Convert one or more .md files to .pdf, .html, & .epub (w/ pandoc)"
+    printf '%s\n' "Polytexy: Markdown to PDF, HTML, & EPUB Converter"
+    printf '%s\n' "    Usage: $(basename $0) file1.md [file2.md ...]"
+    printf '%s\n' "    Convert one or more .md files to .pdf, .html, & .epub (w/ pandoc)"
 }
 
 # If no arguments were provided or the --help/-h flag was passed, print usage information
@@ -73,7 +73,7 @@ do
     # First, check if the file exists, and ends in .md extension.
     if [[ ! -s ${file} || ! ${file} == *.md ]]
     then
-        echo "Error: $file is not a valid Markdown file. Conversion stopped."
+        printf '%s\n' "Error: $file is not a valid Markdown file. Conversion stopped."
         exit 1
     fi
 
@@ -82,5 +82,5 @@ do
     build_latex ${file}
     build_pdf   ${file}
     
-    echo "Successfully converted ${file} into PDF, HTML, and EPUB."
+    printf '%s\n' "Successfully converted ${file} into PDF, HTML, and EPUB."
 done
