@@ -31,6 +31,7 @@ function tprint (tbl, indent)
     if not indent then indent = 0 end
     local toprint = string.rep(" ", indent) .. "{\r\n"
     indent = indent + 2 
+
     for k, v in pairs(tbl) do
       toprint = toprint .. string.rep(" ", indent)
       if (type(k) == "number") then
@@ -48,6 +49,7 @@ function tprint (tbl, indent)
         toprint = toprint .. "\"" .. tostring(v) .. "\",\r\n"
       end
     end
+    
     toprint = toprint .. string.rep(" ", indent-2) .. "}"
     print(toprint)
 end

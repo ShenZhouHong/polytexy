@@ -59,6 +59,11 @@ build_pdf() {
 
     # Build PDF from LaTeX source file via LuaLaTeX
     latexmk -silent -pdf -lualatex -outdir=. "${filename}".tex
+}
+
+clean_pdf() {
+    local file="$1"
+    local filename="$(basename "${file}" .md)"
 
     # Cleanup LaTeX Build Artifacts
     latexmk -silent -c
@@ -81,6 +86,7 @@ do
     build_epub  ${file}
     build_latex ${file}
     build_pdf   ${file}
+    clean_pdf   ${file}
     
     printf '%s\n' "Successfully converted ${file} into PDF, HTML, and EPUB."
 done

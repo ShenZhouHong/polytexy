@@ -101,6 +101,7 @@ def action(element, doc):
             element.text = re.sub(match, replacement, element.text)
 
 def main(doc=None):
+    # This function is required for pandoc to run our filter.
     return pf.run_filter(action, doc=doc)
 
 if __name__ == '__main__':
