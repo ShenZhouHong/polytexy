@@ -63,7 +63,9 @@ Note that some fields such as `title`, `author`, and `date` are required.
 # General document information (title, author, and date required)
 title: Test Document 1
 subtitle: Test document subtitle
-author: Shen Zhou Hong
+author: # Supports both single author value, or list of multiple authors
+    - John Smith
+    - Jane Doe
 description: File description test string.
 date: 2020-12-26
 lang: en-US

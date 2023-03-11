@@ -1,7 +1,9 @@
 --- 
 title: Test Document 1
 subtitle: Test document subtitle
-author: Shen Zhou Hong
+author:
+    - John Smith
+    - Jane Doe
 description: File description test string.
 date: 2020-12-26
 lang: en-US

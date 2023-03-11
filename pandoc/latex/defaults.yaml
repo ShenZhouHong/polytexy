@@ -11,6 +11,6 @@ wrap: none
 columns: 80
 cite-method: biblatex
 template: ${.}/latex-base.tex
-from: markdown-auto_identifiers+raw_tex+citations
+from: markdown+raw_tex+citations
 filters: 
   - "${.}/../string-substitution.py"

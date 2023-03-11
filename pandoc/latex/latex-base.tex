@@ -1,10 +1,19 @@
 \begin{filecontents*}{\jobname.xmpdata}
-  $if(subtitle)$
+  ${ if(subtitle) }
     \Title{$title$: $subtitle$}
-  $else$
+  ${ else }
     \Title{$title$}
-  $endif$
-  \Author{$author$}
+  ${ endif }
+
+  ${ if(author) }
+    \Author{
+      ${ for(author) }
+        ${it}
+      ${ sep }
+      \sep
+      ${ endfor }
+    }
+  ${ endif }
   \Language{$lang$}
   \Subject{$description$}
   $if(date)$
@@ -41,7 +50,16 @@ ${endif}
   $endif$
 }
 
-\author{$author$}
+${ if(author) }
+\author{
+  ${ for(author) }
+  ${it}
+  ${ sep }
+  \and 
+  ${ endfor }
+}
+${ endif }
+
 \date{
   $if(date)$
     $date$
