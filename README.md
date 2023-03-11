@@ -74,11 +74,12 @@ git_link: https://example.com/
 
 # LaTeX specific options (all optional)
 documentclass:
-    - protrudelabels
-    - onehalfspacing
-    - extraligatures
-    - notitlepage
-    - english
+    - protrudelabels    # Remove to disable label protrusion
+    - onehalfspacing    # or doublespacing, singlespacing
+    - extraligatures    # Remove for less decorative ligatures
+    - notitlepage       # or titlepage
+    - english           # Sets correct language metadata
+    - widemargins       # For LaTeX-style wide margins. Remove for narrower margins
 maketitle: true
 csquotes: true
 ---
