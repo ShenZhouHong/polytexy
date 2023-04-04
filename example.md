@@ -43,7 +43,7 @@ dedit, radicibus omnibus feritate meliore in narrantia, nec, omne dumque.
 - Quo magna summoque ignibus terra est ossibus
 
 
-Divae inrequietus laeta quo *refer esse* limes mollit sulphura, verentur pietas,
+*Divae inrequietus laeta* quo *refer esse* limes mollit sulphura, verentur pietas,
 se! Haec occidit omne ubi fortis derepta humiles, data temptat velut ubi
 sanguine. Medio sed oculis receptis nomen dira aureae, nec, praesens trahuntur
 [parientem sacrorum volubile](#pactolonque-exponit-siquos): longum in ac.
@@ -53,7 +53,7 @@ potentia.
 ## Urbe florem gaudet mutare iam colonis quo
 
 
-Patre timore: e utero decentia enim, somni praeponere rate dissiluit dona corpus
+Patre timore: **e utero decentia enim**, somni praeponere rate dissiluit dona corpus
 licet. Rari loqui, ad cadunt ante et [ponit](#unxere-animis): laurus! Rogabo
 nube loquar, quoque conubia Elysiasque dictos.
 
