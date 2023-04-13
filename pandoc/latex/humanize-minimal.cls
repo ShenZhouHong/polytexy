@@ -123,7 +123,7 @@
   % Check if pgfplots package is loaded.
   \IfPackageLoadedTF{pgfplots}{
     % If so, disable legacy compatibility options and increase sample size
-    \pgfplotsset{compat=1.17}
+    \pgfplotsset{compat=1.18}
     \pgfplotsset{samples=300}
   }{}
 }
@@ -158,6 +158,7 @@
 \RequirePackage[compact]{titlesec}        % Sets section titles to be more compact
 \RequirePackage{titling}                  % In order to make the title higher on page
 \RequirePackage{enumitem}                 % Customize itemize and enumerate environments
+\RequirePackage{multicol}
 
 % Finally, we begin some misc. configuration
 
