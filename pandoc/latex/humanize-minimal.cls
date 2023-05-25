@@ -109,6 +109,13 @@
   \ClassInfo{humanize}{Disabling geometry package's narrower margins}
 }
 
+\DeclareOption{nosectionnumbers}{%
+  \AtEndOfClass{
+    \setcounter{secnumdepth}{0}
+  }
+  \ClassInfo{humanize}{Disabling section numbering}
+}
+
 % Pass any other undeclared options to base article documentclass
 \DeclareOption*{
   \PassOptionsToClass{\CurrentOption}{article}

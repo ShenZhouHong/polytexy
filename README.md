@@ -82,6 +82,7 @@ documentclass:
     - notitlepage       # or titlepage
     - english           # Sets correct language metadata
     - widemargins       # For LaTeX-style wide margins. Remove for narrower margins
+    - nosectionnumbers  # Disable section numbering
 maketitle: true
 csquotes: true
 ---
