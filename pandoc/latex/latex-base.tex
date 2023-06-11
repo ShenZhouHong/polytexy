@@ -55,7 +55,7 @@ ${endif}
 }
 
 ${ if(author) }
-  ${ if(omitauthor) }
+  ${ if(maketitle.omitauthor) }
     % We will not typeset the author information in the \maketitle macro.
     % Instead, author information will be preserved in the PDF/X metadata
     \preauthor{}
@@ -73,7 +73,7 @@ ${ if(author) }
 ${ endif }
 
 ${ if(date) }
-  ${ if(omitdate) }
+  ${ if(maketitle.omitdate) }
     % We will not typeset the date information in the \maketitle macro.
     % Instead, date information will be preserved in the PDF/X metadata.
     \predate{}
@@ -90,6 +90,62 @@ ${ endif }
 % For Pandoc
 \providecommand{\tightlist}{}
 
+% Custom Header and Footer settings
+${ if(header) }
+  \usepackage{fancyhdr}
+  % Configuration for 'fancy' headers and footers
+  \fancypagestyle{plain}{
+    % Clear all definitions from the fancy pagestyle
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+  }
+  \fancypagestyle{fancy}{
+    % Fancy Header Formatting
+    \renewcommand{\headrulewidth}{0.4pt}
+    \fancyhead[L]{$header.left$}
+    \fancyhead[C]{$header.center$}
+    \fancyhead[R]{$header.right$}
+
+    ${ if(footer) }
+      % Fancy Footer Formatting
+      \renewcommand{\footrulewidth}{0pt}
+      \fancyfoot[L]{$footer.left$}
+      ${ if(footer.center) }
+        % Overwrite page numbering with custom footer
+        \fancyfoot[C]{$footer.center$}
+      ${ endif }
+      \fancyfoot[R]{$footer.right$}
+    ${ endif }
+  }
+  % Update the plain heading format so that the first page includes page n of m
+  % Set the document header-footer pagestyle to fancy, from above
+  \pagestyle{fancy}
+${ elseif(footer) }
+  \usepackage{fancyhdr}
+  % Configuration for 'fancy' headers and footers
+  \fancypagestyle{plain}{
+    % Clear all definitions from the fancy pagestyle
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+  }
+  \fancypagestyle{fancy}{
+    % Clear all definitions from the fancy pagestyle
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+
+    \renewcommand{\footrulewidth}{0pt}
+    \fancyfoot[L]{$footer.left$}
+    ${ if(footer.center) }
+      % Overwrite page numbering with custom footer
+      \fancyfoot[C]{$footer.center$}
+    ${ endif }
+    \fancyfoot[R]{$footer.right$}
+  }
+  \pagestyle{fancy}
+${ endif }
+
 \begin{document}
 
 ${ if(maketitle) }
@@ -98,7 +154,7 @@ ${ endif }
 
 ${ if(maketoc) }
   \tableofcontents
-  ${ if(tocpage) }
+  ${ if(maketoc.clearpage) }
     % Set the table of contents on its own page.
     \clearpage
   ${ endif }

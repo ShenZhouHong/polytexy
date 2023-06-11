@@ -84,11 +84,24 @@ documentclass:
     - widemargins       # For LaTeX-style wide margins. Remove for narrower margins
     - nosectionnumbers  # Disable section numbering
     - a4paper
-maketitle: true
-maketoc: true
-tocpage: false          # Set the table of contents on its own page.
-omitdate: false         # Do not typeset the date in the title
-omitauthor: true        # Do not typeset the author in the title
+
+# Titling and Table of Content Options (all optional)
+maketitle:
+    omitdate: false         # Do not typeset the date in the title
+    omitauthor: false       # Do not typeset the author in the title
+maketoc:
+    clearpage: true         # Set the table of contents on its own page.
+
+# Fancyhdr options for headers and footers (all optional)
+header:
+    left: Polytexy
+    center:
+    right: Example
+footer:
+    left: Footer Left
+    center:
+    right: Footer Right
+
 csquotes: true
 ---
 ```
