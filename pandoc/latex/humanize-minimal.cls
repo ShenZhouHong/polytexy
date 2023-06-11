@@ -155,7 +155,9 @@
 
 % General packages in use
 \RequirePackage{fontspec}                 % LuaLaTeX font support
-\RequirePackage{babel}                    % Multiple languages and metadata support
+\RequirePackage{polyglossia}              % Multiple languages and metadata support
+\RequirePackage{luatexja-fontspec}        % For Chinese/Korean/Japanese language support
+\setmainjfont{FandolSong}                 % CKJ Font
 \RequirePackage{libertinus-otf}           % Beautiful libertinus font
 \RequirePackage{microtype}                % Microtypography adjustments
 \RequirePackage{geometry}           % Adjusts for narrower page margins
@@ -166,6 +168,7 @@
 \RequirePackage{titling}                  % In order to make the title higher on page
 \RequirePackage{enumitem}                 % Customize itemize and enumerate environments
 \RequirePackage{multicol}
+\RequirePackage[useregional]{datetime2}   % For region-specific date typesetting
 
 % Finally, we begin some misc. configuration
 

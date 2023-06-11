@@ -4,7 +4,8 @@ subtitle: Test document subtitle
 author:
     - John Smith
     - Jane Doe
-description: File description test string.
+description: |
+    File description test string.
 date: 2020-12-26
 lang: en-US
 url_link: https://example.com/
@@ -14,9 +15,13 @@ documentclass:
     - onehalfspacing
     - extraligatures
     - notitlepage
-    - english
     - widemargins
+    - a4paper
 maketitle: true
+maketoc: true
+tocpage: true          # Set the table of contents on its own page.
+omitdate: false         # Do not typeset the date in the title
+omitauthor: false       # Do not typeset the author in the title
 csquotes: true
 ---
 

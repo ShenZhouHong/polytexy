@@ -32,50 +32,77 @@ ${if(documentclass)}
   ${for(documentclass)}
     ${it},
   ${endfor}
+  $lang$
 ${else}
   protrudelabels,
   onehalfspacing,
   extraligatures,
   notitlepage,
-  english
+  american
 ${endif}
 ]{humanize-minimal}
 
+% For polyglossia
+\setdefaultlanguage{$lang$}
+
 \title{
-  $if(subtitle)$
+  ${ if(subtitle) }
     \textbf{$title$}: \\
     $subtitle$
-  $else$
+  ${ else }
     $title$
-  $endif$
+  ${ endif }
 }
 
 ${ if(author) }
-\author{
-  ${ for(author) }
-  ${it}
-  ${ sep }
-  \and 
-  ${ endfor }
-}
+  ${ if(omitauthor) }
+    % We will not typeset the author information in the \maketitle macro.
+    % Instead, author information will be preserved in the PDF/X metadata
+    \preauthor{}
+    \postauthor{}
+    \author{}
+  ${else}
+    \author{
+      ${ for(author) }
+      ${it}
+      ${ sep }
+      \and 
+      ${ endfor }
+    }
+  ${ endif }
 ${ endif }
 
-\date{
-  $if(date)$
-    $date$
-  $else$
-    \today
-  $endif$
-}
+${ if(date) }
+  ${ if(omitdate) }
+    % We will not typeset the date information in the \maketitle macro.
+    % Instead, date information will be preserved in the PDF/X metadata.
+    \predate{}
+    \postdate{}
+    \date{}
+  ${ else }
+    \DTMsavedate{titledate}{$date$}
+    \date{\DTMusedate{titledate}}
+  ${ endif } 
+${ else }
+  \date{\today}
+${ endif }
 
 % For Pandoc
 \providecommand{\tightlist}{}
 
 \begin{document}
 
-$if(maketitle)$
+${ if(maketitle) }
   \maketitle
-$endif$
+${ endif }
+
+${ if(maketoc) }
+  \tableofcontents
+  ${ if(tocpage) }
+    % Set the table of contents on its own page.
+    \clearpage
+  ${ endif }
+${ endif }
 
 $body$
 

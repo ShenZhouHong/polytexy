@@ -66,7 +66,8 @@ subtitle: Test document subtitle
 author: # Supports both single author value, or list of multiple authors
     - John Smith
     - Jane Doe
-description: File description test string.
+description: |
+    File description test string.
 date: 2020-12-26
 lang: en-US
 
@@ -80,10 +81,14 @@ documentclass:
     - onehalfspacing    # or doublespacing, singlespacing
     - extraligatures    # Remove for less decorative ligatures
     - notitlepage       # or titlepage
-    - english           # Sets correct language metadata
     - widemargins       # For LaTeX-style wide margins. Remove for narrower margins
     - nosectionnumbers  # Disable section numbering
+    - a4paper
 maketitle: true
+maketoc: true
+tocpage: false          # Set the table of contents on its own page.
+omitdate: false         # Do not typeset the date in the title
+omitauthor: true        # Do not typeset the author in the title
 csquotes: true
 ---
 ```

@@ -82,8 +82,8 @@ do
         exit 1
     fi
 
-    build_html  ${file}
-    build_epub  ${file}
+    # build_html  ${file}
+    # build_epub  ${file}
     build_latex ${file}
     build_pdf   ${file}
     clean_pdf   ${file}
