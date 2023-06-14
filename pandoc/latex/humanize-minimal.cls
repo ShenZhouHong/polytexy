@@ -1,6 +1,6 @@
 % Humanize: An Opinionated LaTeX Template for the Humanities
 \NeedsTeXFormat{LaTeX2e}[2021/11/15]
-\ProvidesClass{humanize}[2021/11/15 v1.00 Humanize Minimal Custom LaTeX Article Class]
+\ProvidesClass{humanize-minimal}[2021/11/15 v1.00 Humanize Minimal Custom LaTeX Article Class]
 
 % Options made available used by \RequirePackage{setspace}
 \DeclareOption{singlespacing}{%
