@@ -156,8 +156,7 @@
 % General packages in use
 \RequirePackage{fontspec}                 % LuaLaTeX font support
 \RequirePackage{polyglossia}              % Multiple languages and metadata support
-\RequirePackage{luatexja-fontspec}        % For Chinese/Korean/Japanese language support
-\setmainjfont{FandolSong}                 % CKJ Font
+% \RequirePackage{luatexja-fontspec}        % For Chinese/Korean/Japanese language support
 \RequirePackage{libertinus-otf}           % Beautiful libertinus font
 \RequirePackage{microtype}                % Microtypography adjustments
 \RequirePackage{geometry}           % Adjusts for narrower page margins
@@ -169,6 +168,7 @@
 \RequirePackage{enumitem}                 % Customize itemize and enumerate environments
 \RequirePackage{multicol}
 \RequirePackage[useregional]{datetime2}   % For region-specific date typesetting
+\RequirePackage{inconsolata}
 
 % Finally, we begin some misc. configuration
 
@@ -188,7 +188,16 @@
     }
 }
 
+
+% Font configuration
 \setmainfont{LibertinusSerif}
+% \setmainjfont{FandolSong}                 % CKJ Font
+\setmonofont[
+  AutoFakeSlant,
+  BoldItalicFeatures={FakeSlant},
+  UprightFont = *-Regular,
+  BoldFont = *-Bold
+]{Inconsolatazi4}
 
 % Settings used by \usepackage{titling}
 % The following command is used to "hang" the default LaTeX title from the top

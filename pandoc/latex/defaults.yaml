@@ -6,6 +6,7 @@
 #  - Allow raw LaTeX to be passed through from the source markdown file
 #  - Write using a custom LaTeX writer (i.e. pandoc conversion ruleset)
 
+pdf-engine: lualatex
 standalone: true
 wrap: none
 columns: 80

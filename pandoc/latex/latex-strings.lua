@@ -20,7 +20,16 @@ VerbatimTemplate = [[
 
 MintedTemplate = [[
 \begin{listing}[h]
-\begin{minted}[baselinestretch=1.0, frame=lines, mathescape, fontfamily=helvetica]{%s}
+\begin{minted}[
+    baselinestretch=1.0,
+    frame=lines,
+    mathescape,
+    autogobble,
+    fontsize=\footnotesize,
+    style=default,
+    breaklines,
+    breakbytoken
+]{%s}
 %s
 \end{minted}
 \end{listing}

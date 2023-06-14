@@ -10,6 +10,18 @@ Command-line utility that converts Markdown files into well-formed PDFs, EPUBs, 
 * Polytexy outputs EPUB files with properly formatted tags and metadata, allowing for easy use and distribution on mobile devices.
 * Stand-alone HTML files with embedded fonts allows for content to be shared on static site servers.
 
+## Examples
+
+Here are some examples of polytexy's outputs. Given the following markdown file (lorem ipsum): 
+
+* [Example markdown input](./example.md)
+
+Polytexy outputs the following:
+
+* [Example PDF output](./example.pdf)
+
+EPUB and HTML output examples will be provided later.
+
 ## Installation
 
 Polytexy is a bash script which uses `pandoc`, `latexmk`, `lualatex`, and `python` in order to convert markdown documents into well-formed PDFs, EPUBs, and stand-alone HTML files. In order to use polytexy, first make sure that all dependencies are installed and available:
