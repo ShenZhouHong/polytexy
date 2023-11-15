@@ -56,6 +56,8 @@ Polytexy: Markdown to PDF, HTML, & EPUB Converter
     Convert one or more .md files to .pdf, .html, & .epub (w/ pandoc)
 ```
 
+### Using `polytexy` on the command line
+
 For a quick test, you may run `polytexy` on the provided `example.md` file in this repository.
 
 ```
@@ -63,6 +65,41 @@ polytexy example.md
 ```
 
 The utility will generate `example.pdf`, `example.html`, and `example.epub`.
+
+### Using `polytexy` with `make`
+
+Polytexy can also be used to compile multiple markdown files in a directory using a makefile. Here is a sample makefile that outputs PDF files from markdown files in a directory:
+
+```make
+# Makefile for converting Markdown (.md) files to PDF using 'polytexy'
+
+# Find all Markdown (.md) files in the current directory, excluding those in IGNORE_FILES
+IGNORE_FILES := README.md
+MARKDOWN_FILES := $(filter-out $(IGNORE_FILES), $(wildcard *.md))
+
+# Create a list of PDF filenames by replacing the .md extension with .pdf
+PDF_FILES := $(MARKDOWN_FILES:.md=.pdf)
+
+# Default target: Convert all Markdown files to PDF
+all: $(PDF_FILES)
+
+# Rule for converting a .md file to a .pdf file
+%.pdf: %.md
+	polytexy $<
+
+# Target for cleaning up generated PDF files
+clean:
+	rm -f $(PDF_FILES)
+
+# Declare 'all' and 'clean' as phony targets (not files)
+.PHONY: all clean
+```
+
+After saving the above file as `makefile` in the directory with the markdown source files, it can be invoked by running `make` on the command line:
+
+```bash
+make
+```
 
 ## Markdown Metadata
 
