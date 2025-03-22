@@ -5,7 +5,15 @@ set -eEu -o pipefail
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Iterate over an array of dependencies and check if each dependency is available
-dependencies=(pandoc latexmk lualatex python)
+dependencies=(pandoc latexmk lualatex)
+
+# Check for either python or python3
+if ! command -v python &> /dev/null && ! command -v python3 &> /dev/null; then
+    printf '%s\n' "Error: Python is not available. Please install Python before running this script."
+    exit 1
+fi
+
+# Check other dependencies
 for dependency in "${dependencies[@]}"
 do
     if ! command -v "${dependency}" &> /dev/null
